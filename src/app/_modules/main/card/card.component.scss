@@ -1,0 +1,97 @@
+.main {
+    width: 350px;
+    height: 250px;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .leftPartCard {
+        width: 80px;
+        height: 100%;
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .typesPkm {
+            height: 80px;
+            width: 100%;
+            background-color: white;
+            border-radius: 0 0 30px 0;
+        }
+        .catchInfoPkm {
+            height: 170px;
+            width: 100%;
+            .pokeball {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+                position: relative;
+                .upperBall {
+                    background-color: red;
+                    width: 50px;
+                    height: 25px;
+                    border-radius: 25px 25px 0 0;
+                }
+                .bottomBall {
+                    background-color: white;
+                    width: 50px;
+                    height: 25px;
+                    border-radius: 0 0 25px 25px;
+                }
+                .middleBall {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 50%;
+                    left: 0;
+                    z-index: 2;
+                    width: 50px;
+                    height: 3px;
+                    background-color: black;
+                    .buttonBall {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100%;
+                        background-color: grey;
+                    }
+                }
+            }
+        }
+    }
+    .rightPartCard {
+        width: 270px;
+        height: 100%;
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        .identifier {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .imageFrame {
+            height: 150px;
+            width: 100%;
+            background-color: orange;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .detailsBtn {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
