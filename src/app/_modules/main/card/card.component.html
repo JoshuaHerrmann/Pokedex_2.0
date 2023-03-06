@@ -13,20 +13,24 @@
                 </div>
                 <div class="bottomBall"></div>
             </div>
-            <div class="shiny"></div>
+            <div class="shiny">
+
+            </div>
+
             <!-- pokeball and shiny -->
         </div>
     </div>
     <div class="rightPartCard">
         <div class="identifier">
-            <div class="namePkm">Glumanda</div>
-            <div class="idPkm">#1</div>
+            <div class="namePkm" *ngIf="loaded">{{ pokemonDetails['name']? pokemonDetails['name']:'Pokemon'}}</div>
+            <div class="idPkm" *ngIf="loaded"> #{{ pokemonDetails['id']?pokemonDetails['id']:'Id'}}</div>
         </div>
-        <div class="imageFrame">
-            <img src="" alt="Pokemon">
+        <div class="imageFrame " [ngClass]="loaded ?  pokemonDetails['types'][0]['type']['name'] : ''">
+            <img src="{{ pokemonDetails['sprites']['other']['official-artwork']['front_default']}}" alt="{{ pokemonDetails['name']? pokemonDetails['name']:'Pokemon'}}" *ngIf="loaded">
         </div>
         <div class="detailsBtn">
             <button>Details</button>
         </div>
+
     </div>
 </div>
